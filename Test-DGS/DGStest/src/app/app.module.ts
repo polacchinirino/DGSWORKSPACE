@@ -9,6 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { Pagina1Component } from './pagina1/pagina1.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Pagina1Component } from './pagina1/pagina1.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

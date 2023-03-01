@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pagina1',
@@ -8,10 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class Pagina1Component implements OnInit {
 
   battuta: string;
-  constructor() { }
+  constructor(public http: HttpClient) { }
 
   ngOnInit(): void {
-    this.battuta = "Quando Chuck Norris fa le flessioni è il mondo che fa su e giù."
   }
+
+  caricaBattuta(){
+    this.http.get('https://api.chucknorris.io/jokes/random').subscribe(resp =>{
+      this.battuta = resp["value"];
+    })
+  }
+
+
 
 }
