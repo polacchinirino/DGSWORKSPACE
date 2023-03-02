@@ -13,13 +13,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { Pagina2Component } from './pagina2/pagina2.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDividerModule} from '@angular/material/divider';
+import { Pagina3Component } from './pagina3/pagina3.component';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     Pagina1Component,
-    Pagina2Component
+    Pagina2Component,
+    Pagina3Component
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatButtonModule,
     MatMenuModule,
     HttpClientModule,
-    MatDividerModule
+    MatDividerModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
