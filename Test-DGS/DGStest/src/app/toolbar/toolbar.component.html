@@ -1,6 +1,12 @@
 <p>
-    <mat-toolbar color="primary">
-      <span>Le battute di Chuck Norris</span>
-      <span class="example-spacer"></span>
-    </mat-toolbar>
-  </p>
+  <mat-toolbar color="primary">
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/home']">Home</button>
+      <button mat-menu-item [routerLink]="['/categorie']">Categorie</button>
+      <button mat-menu-item>Ricerca Battute</button>
+    </mat-menu>
+    <span>Le battute di Chuck Norris</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</p>

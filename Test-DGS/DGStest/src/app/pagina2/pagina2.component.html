@@ -1,0 +1,16 @@
+<div class="content" role="main">
+    <div *ngFor="let categoria of categorie">
+        <h1>Qui potrai leggere una delle battute di Chuck Norris!</h1>
+        <div class="card-container">
+            <span class="card">
+                <span *ngIf="showBattuta(categoria)">
+                    {{battuta}}
+                </span>
+            </span>
+        </div>
+
+        <div>
+            <button mat-raised-button color="warn" class="sort-button" (click)="caricaBattutaDataUnaCategoria(categoria)">{{categoria}}</button>
+        </div>
+        <mat-divider></mat-divider>
+    </div>
