@@ -18,7 +18,6 @@ export class Pagina3Component implements OnInit {
     this.http.get('https://api.chucknorris.io/jokes/search?query='+this.inputValue).subscribe(resp =>{
       this.battute = resp;
       this.battute = this.battute.result;
-      console.log(this.battute);
     })
   }
 
